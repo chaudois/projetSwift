@@ -25,14 +25,6 @@
                                     <navigationItem title="food select" id="a7v-EA-2IE"/>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="opm-7U-5Z2">
-                                <rect key="frame" x="106" y="319" width="163" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Sur place"/>
-                                    <segment title="à emporter"/>
-                                </segments>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6E-ii-FRu">
                                 <rect key="frame" x="277" y="168" width="33" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

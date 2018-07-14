@@ -37,7 +37,6 @@ class MapControler :UIViewController{
             view=mapView
             locationManager.requestAlwaysAuthorization();
             let marker = GMSMarker()
-            print("\nlocation : x=\(location?.latitude ?? 0.0) y=\(location?.longitude ?? 0.0)\n");//position de l'ESGI
             marker.position = CLLocationCoordinate2D(latitude: location!.latitude, longitude: location!.longitude)
             marker.title = "YOU"
             marker.snippet = "your current position"
@@ -61,7 +60,13 @@ class MapControler :UIViewController{
                     print(positions[0]["geometry"]["location"]["lng"])
                     print("\n coordonées : "+lat+" "+lng)
                     positionMiamMiam = (lat + "," + lng)
-                    
+                    let markerTarget = GMSMarker()
+                    markerTarget.position = CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(lng)!)
+                    let name = positions[0]["name"].stringValue
+                    markerTarget.title = self.foodtype
+                    markerTarget.snippet = name
+                    markerTarget.map = mapView
+                    mapView.selectedMarker=markerTarget
                     let urlToFindRoute = "https://maps.googleapis.com/maps/api/directions/json?origin="+origin+"&destination="+positionMiamMiam+"&mode=walking&key=AIzaSyBuX36jdFaFC4ge7pfKcMdIzdlktWtmT9c"
                     Alamofire.request(urlToFindRoute).responseJSON { response in
                         do{
@@ -90,12 +95,12 @@ class MapControler :UIViewController{
                                 
                             }
                         }catch{
-                            print("vraiment pas cool")
+                            print(" pas cool")
                         }
                     }
                     
                  }catch{
-                    print("pas cool")
+                    print("vraiment pas cool")
                 }
             }
             
