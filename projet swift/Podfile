@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+target 'projet swift' do
+pod 'GoogleMaps'
+pod 'GooglePlacePicker'
+pod 'GooglePlaces'
+pod 'Alamofire', '~> 4.5'
+pod 'SwiftyJSON'
+end
